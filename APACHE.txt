@@ -1,0 +1,5 @@
+APACHE:
+	Apache es un servidor web HTTP de cÎáÎõÎådigo abierto para plataformas Unix-like (BSD, GNU/Linux, etc.), Windows, Macintosh y otras, que implementa el protocolo HTTP/1.1 y la nociÎáÎõÎån de sitio virtual.
+
+	En sus inicios se basaba en el cÎáÎõÎådigo de NCSA HTTPd 1.3, pero mÎáÎõÎİs tarde fue reescrito por completo. Actualmente es el servidor web mÎáÎõÎİs usado en todo el mundo, superando en 2009 los 100 millones de sitios web, el 70% del total. EstÎáÎõÎİ desarrollado y mantenido por una comunidad de usuarios en torno a la Apache Software Foundation.
+
