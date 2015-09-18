@@ -1,3 +1,5 @@
+exports.problem = function () { }.toString().split('\n').slice(1,-1).join('\n')
+
 var http = require("http");
 var urlParser = require("url");
 var port = process.argv[2];
@@ -29,3 +31,4 @@ var server = http.createServer(function (req, res) {
 });
 
 server.listen(port);
+
