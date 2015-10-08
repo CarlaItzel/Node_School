@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+	<script>
+	var xmlHttp=null;
+	if (window.XMLHttpRequest !=null) 
+		{
+			xmlHttp= new XMLHttpRequest();
+		}
+		else	
+		{
+			xmlHttp= new ActiveXObject("Microsoft. XMLHTTP");
+		}
+		//if(xmlHttp==null) return;
+
+		xmlHttp.onreadystatechange=function()
+		{
+			//_________________________________Receive an HTTP Response
+			//xmlHttp.readyState.1 The request been set up
+			//xmlHttp.readyState.2 The request been sent
+			//xmlHttp.readyState.3 The request is in process
+			if (xmlHttp.readyState==0) xmlHttp.readyState= 0 //The request is not initialized
+				{
+					alert('xmlHttp:The request is not initialized');
+				}
+			else if (xmlHttp.readyState==4 && xmlHttp.status !=200) //xmlHttp.readyState= 4 The request is complete 
+			 {
+			 	alert('Invalid HTTP request\nxmlHttp.readyState='+ xmlHttp.readyState.toString()+'\nxmlHttp.status='+ xmlHttp.status.toString());
+			 }
+			 else if (xmlHttp.readyState==4 && xmlHttp.status !=200) //xmlHttp.readyState=4 The request is complete 
+			 {
+			 	alert('Invalid HTTP request\nxmlHttp.readyState='+ xmlHttp.readyState.toString() + '\nxmlHttp.status='+ xmlHttp.status.toString());
+			 }
+			 else if (xmlHttp.readyState==4 && xmlHttp.status==200) //xmlHttp.readyState = 4 The request is complete 
+			 {
+
+			 	//xmlHttp.responseXML.preserveWhiteSpace= true;
+			 	//Document.write(xmlHttp.responseText);
+			 	alert(xmlHttp.responseText);
+			 }
+		}
+		//_____________________________________________ Send an HTTP Request
+		//_____________________________________________POST
+		//var body = "some data";
+		//xmlHttp.open("POST","http://yahoo.com", true);
+		//xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+		//xmlHttp.setRequestHeader('Content-Length', body.length);
+		//xmlHttp.send(body);
+		//xmlHttp.Send();
+		//______________________________________________GET
+		xmlHttp.open("GET","http://www.yahoo.com", true);
+		//xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		xmlHttp.setRequestHeader('Content-Length','0');
+		xmlHttp.Send();
+	</script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body> 	
+</body>
+</html>
